@@ -5,7 +5,7 @@ MAINTAINER Amos Sonnenwirth <amoss@tikalk.com>
 
 ADD mariadb.repo /etc/yum.repos.d/mariadb.repo
 
- RUN yum install -y hostname MariaDB-server
+ RUN yum install -y arm-build-server MariaDB-server
  RUN yum clean all
 
  EXPOSE 3306
