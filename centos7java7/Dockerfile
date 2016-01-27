@@ -2,7 +2,7 @@
 # It is based on instructions from https://wiki.jenkins-ci.org/display/JENKINS/Docker+Plugin and Dockerfile 
 # from https://hub.docker.com/r/evarga/jenkins-slave/
 
-FROM centos:latest
+FROM centos:6.7
 MAINTAINER Haggai Philip Zagury <hagzag@tikalk.com>
 
 # Install a basic SSH server GIT, UNZIP, LSOF and JDK 8
