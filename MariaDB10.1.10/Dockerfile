@@ -12,6 +12,8 @@ MAINTAINER Amos Sonnenwirth <amoss@tikalk.com>
  RUN yum clean all
  RUN chmod +x /root/mariadb.sh
 
+ RUN echo "mysql:mysql" | chpasswd
+ 
  EXPOSE 3306
 
  CMD ["/root/mariadb.sh"]
