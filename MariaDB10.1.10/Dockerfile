@@ -11,6 +11,8 @@ MAINTAINER Amos Sonnenwirth <amoss@tikalk.com>
  RUN yum install -y arm-build-server MariaDB-server
  RUN yum clean all
  RUN chmod +x /root/mariadb.sh
+
+ RUN echo "root:root" | chpasswd
  
  EXPOSE 3306
 
