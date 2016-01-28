@@ -13,6 +13,7 @@ MAINTAINER Amos Sonnenwirth <amoss@tikalk.com>
  RUN chmod +x /root/mariadb.sh
 
  RUN echo "mysql:mysql" | chpasswd
+ RUN echo "root:12345" | chpasswd
  
  EXPOSE 3306
 
