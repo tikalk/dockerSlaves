@@ -12,8 +12,3 @@ mysql -v < /root/mariadb.sql
 sleep 5s
 
 service mysql restart
-#ps -wef | grep mysql | grep -v grep | awk '{print $2}' | xargs kill -9
-
-#sleep 5s
-
-#mysqld_safe --user mysql
