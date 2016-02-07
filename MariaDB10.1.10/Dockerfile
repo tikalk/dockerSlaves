@@ -20,6 +20,6 @@ ENV TERM xterm
 
 EXPOSE 3306 
 
-CMD /start.sh
+CMD /root/start.sh
  
 
