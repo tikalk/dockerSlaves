@@ -16,15 +16,18 @@ RUN \
     useradd -r -M -d $ACTIVEMQ_HOME activemq && \
     chown activemq:activemq /opt/$ACTIVEMQ -R
 
-COPY activemq.xml /opt/$ACTIVEMQ/conf
+ADD activemq.xml /opt/activemq/conf/activemq.xml
+RUN chown activemq:activemq /opt/activemq/conf/activemq.xml
 	
 RUN chmod +x /root/start.sh
-
 	
-USER activemq
+#USER activemq
 
 WORKDIR $ACTIVEMQ_HOME
 EXPOSE 61616 8161
+
+# WORKAOUNRD - should be set when installing JAVA
+ENV JAVA_HOME /usr/java/jdk1.7.0_75
 
 #CMD ["/bin/bash", "-c", "bin/activemq console"]
 CMD /root/start.sh
