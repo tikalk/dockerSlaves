@@ -5,6 +5,8 @@ ENV ACTIVEMQ apache-activemq-$ACTIVEMQ_VERSION
 
 ENV ACTIVEMQ_HOME /opt/activemq
 
+ADD start.sh /root/start.sh
+
 RUN \
     curl -O http://archive.apache.org/dist/activemq/$ACTIVEMQ_VERSION/$ACTIVEMQ-bin.tar.gz && \
     mkdir -p /opt && \
@@ -14,9 +16,15 @@ RUN \
     useradd -r -M -d $ACTIVEMQ_HOME activemq && \
     chown activemq:activemq /opt/$ACTIVEMQ -R
 
+COPY activemq.xml $ACTIVEMQ_HOME/conf
+	
+RUN chmod +x /root/start.sh
+
+	
 USER activemq
 
 WORKDIR $ACTIVEMQ_HOME
 EXPOSE 61616 8161
 
-CMD ["/bin/bash", "-c", "bin/activemq console"]
+#CMD ["/bin/bash", "-c", "bin/activemq console"]
+CMD /root/start.sh
