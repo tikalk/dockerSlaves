@@ -16,7 +16,7 @@ RUN \
     useradd -r -M -d $ACTIVEMQ_HOME activemq && \
     chown activemq:activemq /opt/$ACTIVEMQ -R
 
-COPY activemq.xml $ACTIVEMQ_HOME/conf
+COPY activemq.xml /opt/$ACTIVEMQ/conf
 	
 RUN chmod +x /root/start.sh
 
