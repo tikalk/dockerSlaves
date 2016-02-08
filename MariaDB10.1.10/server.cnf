@@ -38,4 +38,4 @@ sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
 
 [mysqld_safe]
 log-error=/var/log/mysqld.log
-pid-file=/var/run/mysqld.pid
+pid-file=/var/lib/mysql/mysqld.pid
