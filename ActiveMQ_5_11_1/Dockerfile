@@ -26,8 +26,5 @@ RUN chmod +x /root/start.sh
 WORKDIR $ACTIVEMQ_HOME
 EXPOSE 61616 8161
 
-# WORKAOUNRD - should be set when installing JAVA
-ENV JAVA_HOME /usr/java/jdk1.7.0_75
-
 #CMD ["/bin/bash", "-c", "bin/activemq console"]
 CMD /root/start.sh
