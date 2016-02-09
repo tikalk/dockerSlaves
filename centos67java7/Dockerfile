@@ -20,7 +20,7 @@ RUN sed -i 's|session    required     pam_loginuid.so|session    optional     pa
     && mkdir -p /var/run/sshd \
     && useradd -u 1000 -m -s /bin/bash jenkins \
     && echo "jenkins:jenkins" | chpasswd \
-    && /usr/bin/ssh-keygen -q -N "" -t rsa -f /etc/ssh/ssh_host_rsa_key\
+    && /usr/bin/ssh-keygen -q -N "" -t rsa -f /etc/ssh/ssh_host_rsa_key
 	
 # Set JAVA_HOME	
 ENV JAVA_HOME /usr/java/jdk1.7.0_75
