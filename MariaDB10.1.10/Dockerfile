@@ -1,6 +1,6 @@
 # This Dockerfile is used to build an image containing MariaDB 10.1.10 based on Centos7Java7
 
-FROM arm-jenkins-slave-centos67:latest
+FROM arm-jenkins-slave-centos67:1.0
 MAINTAINER Amos Sonnenwirth <amoss@tikalk.com>
 
 ADD mariadb.repo /etc/yum.repos.d/mariadb.repo

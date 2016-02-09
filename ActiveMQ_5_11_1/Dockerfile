@@ -1,4 +1,4 @@
-FROM arm-centos67-mariadb:1.2
+FROM arm-centos67-mariadb:1.3
 
 ENV ACTIVEMQ_VERSION 5.11.1
 ENV ACTIVEMQ apache-activemq-$ACTIVEMQ_VERSION
